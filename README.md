@@ -7,7 +7,8 @@
 * Casey Stump
   * Started overleaf to move from google doc to overleaf with correct formatting 
 * Maggie Ring
-  * Started working on Unity project so far in getting basics down of start 
+  * Started working on Unity project so far in getting basics down of start
+  * Doing video showing what we have done so far
 * Lino Barrios
   * Starting a part of the research paper 
 
