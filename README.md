@@ -2,6 +2,7 @@
 
 ## Contributors:
 * Mallory Guerdet-Schuster
+    * Started the readme to have all parts for the checkpoint one 
     * started the Document for research paper, intro and Explaining experiment
 * Casey Stump
   * Started overleaf to move from google doc to overleaf with correct formatting 
