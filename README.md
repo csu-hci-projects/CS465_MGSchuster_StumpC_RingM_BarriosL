@@ -10,7 +10,8 @@
   * Started working on Unity project so far in getting basics down of start
   * Doing video showing what we have done so far
 * Lino Barrios
-  * Starting a part of the research paper 
+  * Starting a part of the research paper
+  * Record video on progress 
 
   ## Research PDF
   * overleaf document here
@@ -18,3 +19,4 @@
   ## Youtube Videos showing project
   * the ones of the code (do not have for Checkpoint one)
   * Showing what we have done so far
+  * https://youtu.be/P1brZZwUOE4
