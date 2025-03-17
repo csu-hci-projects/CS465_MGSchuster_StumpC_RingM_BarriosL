@@ -14,7 +14,7 @@
   * Record video on progress 
 
   ## Research PDF
-  * overleaf document here
+  * [overleaf document here](https://www.overleaf.com/read/msxcfwxjstyy#edbfe8)
  
   ## Youtube Videos showing project
   * the ones of the code (do not have for Checkpoint one)
