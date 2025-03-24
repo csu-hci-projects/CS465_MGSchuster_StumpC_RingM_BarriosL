@@ -4,6 +4,8 @@
 * Mallory Guerdet-Schuster
     * Started the readme to have all parts for the checkpoint one 
     * started the Document for research paper, intro and Explaining experiment
+    * Blue Block
+    * Table
 * Casey Stump
   * Started overleaf to move from google doc to overleaf with correct formatting 
 * Maggie Ring
