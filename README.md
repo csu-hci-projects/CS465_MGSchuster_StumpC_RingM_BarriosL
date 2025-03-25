@@ -3,13 +3,14 @@
 ## Contributors:
 * Mallory Guerdet-Schuster
     * Started the readme to have all parts for the checkpoint one 
-    * started the Document for research paper, intro and Explaining experiment
+    * started the Document for the research paper, intro, and Explaining the experiment
     * Blue Block
     * Table
+    * Thumbs up gesture
 * Casey Stump
-  * Started overleaf to move from google doc to overleaf with correct formatting 
+  * Started Overleaf to move from Google doc to Overleaf with correct formatting 
 * Maggie Ring
-  * Started working on Unity project so far in getting basics down of start
+  * Started working on Unity project so far, in getting the basics down of start
   * Doing video showing what we have done so far
 * Lino Barrios
   * Starting a part of the research paper
