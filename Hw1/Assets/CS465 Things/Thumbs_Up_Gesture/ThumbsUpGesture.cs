@@ -6,8 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ThumbsUpGesture : MonoBehaviour
 {
 
-    thumbsupRight = XR.RightHand.Gesture();
-    thumbsupLeft = XR.LeftHand.Gesture();
+    // thumbsupRight = XR.RightHand.Gesture();
+    // thumbsupLeft = XR.LeftHand.Gesture();
 
     // Start is called before the first frame update
     void Start()
