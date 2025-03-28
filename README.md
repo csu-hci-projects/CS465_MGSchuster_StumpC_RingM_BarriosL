@@ -8,7 +8,9 @@
     * Table
     * Thumbs up gesture
 * Casey Stump
-  * Started Overleaf to move from Google doc to Overleaf with correct formatting 
+  * Started Overleaf to move from Google doc to Overleaf with correct formatting
+  * Yellow Block
+  * Cleared git cache and re-added gitignore file so we can committ changes normaly.
 * Maggie Ring
   * Started working on Unity project so far, in getting the basics down of start
   * Doing video showing what we have done so far
