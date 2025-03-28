@@ -83,5 +83,6 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /Hw1/[Aa]ssets/[Ss]treamingAssets/aa.meta
 /Hw1/[Aa]ssets/[Ss]treamingAssets/aa/*
+LockPicking_Project/Library/PackageCache/com.unity.burst@1.8.16/.Runtime/libburst-llvm-16.dylib
 /LockPicking_Project/[Aa]ssets/[Ss]treamingAssets/aa.meta
 /LockPicking_Project/[Aa]ssets/[Ss]treamingAssets/aa/*
