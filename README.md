@@ -24,6 +24,8 @@
   * Record video on progress
   * implement interaction capabilities with red block and blue block
   * create red block
+  * setup controller to interact with cubes
+    
     
     
 
