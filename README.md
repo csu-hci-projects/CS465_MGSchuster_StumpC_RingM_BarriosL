@@ -16,7 +16,11 @@
   * Doing video showing what we have done so far
 * Lino Barrios
   * Starting a part of the research paper
-  * Record video on progress 
+  * Record video on progress
+  * implement interaction capabilities with red block and blue block
+  * create red block
+    
+    
 
   ## Research PDF
   * [overleaf document here](https://www.overleaf.com/read/msxcfwxjstyy#edbfe8)
