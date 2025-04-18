@@ -8,17 +8,31 @@ public class ButtonFollowVisual : MonoBehaviour
     public Transform visualTarget;
     public Vector3 localAxis;
 
+    private Vector3 initialLocalPos;
+    private Vector3 initialPos;
+    public Vector3 threshold;
     private Vector3 offset;
+    public float resetSpeed = 10;
+    public Vector3 disapear;
+    public Transform pin;
+
     private Transform pokeAttachTransform;
+
+    private bool freeze = false;
+
 
     private XRBaseInteractable interactable;
     private bool isFollowing = false;
     // Start is called before the first frame update
     void Start()
     {
+        initialLocalPos = visualTarget.localPosition;
+        initialPos = visualTarget.position;
+
         interactable = GetComponent<XRBaseInteractable>();
         interactable.hoverEntered.AddListener(Follow);
         interactable.hoverExited.AddListener(Reset);
+        interactable.selectEntered.AddListener(Freeze);
     }
 
     public void Follow(BaseInteractionEventArgs hover)
@@ -27,6 +41,7 @@ public class ButtonFollowVisual : MonoBehaviour
         {
             XRPokeInteractor interactor = (XRPokeInteractor)hover.interactorObject;
             isFollowing = true;
+            freeze = false;
             pokeAttachTransform = interactor.attachTransform;
             offset = visualTarget.position - pokeAttachTransform.position;
         }
@@ -37,53 +52,44 @@ public class ButtonFollowVisual : MonoBehaviour
         if (hover.interactorObject is XRPokeInteractor)
         {
             isFollowing = false;
+            freeze = false;
         }
     }
 
-    // // Update is called once per frame
-    // void Update()
-    // {
-    //     if (isFollowing)
-    //     {
-    //         Vector3 localTargetPosition = visualTarget.InverseTransformPoint(pokeAttachTransform.position + offset);
-    //         Vector3 contrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
+    public void Freeze(BaseInteractionEventArgs hover)
+    {
+        if (hover.interactorObject is XRPokeInteractor)
+        {
+            freeze = true;
+        }
+    }
 
-    //         visualTarget.position = visualTarget.TransformPoint(contrainedLocalTargetPosition);
-    //     }
 
-    // }
-
-    // Define limits and AudioSource
-    public float minLimit = 0f;
-    public float maxLimit = 1f;
-    public AudioSource clickSound;
-
-    //start at x=0, y=0, z =-0.0858
-    //end at x=0, y=0, z =0.029
-
+    // Update is called once per frame
     void Update()
     {
+        if (freeze)
+        {
+            pin.position = pin.TransformPoint(disapear);
+            return;
+        }
+        if (visualTarget.position.y >= initialPos.y + threshold.y)
+        {
+            pin.position = pin.TransformPoint(disapear);
+            return;
+        }
+
         if (isFollowing)
         {
             Vector3 localTargetPosition = visualTarget.InverseTransformPoint(pokeAttachTransform.position + offset);
+
             Vector3 contrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
 
-            // Clamp the position along the axis
-            float constrainedValue = Mathf.Clamp(Vector3.Dot(contrainedLocalTargetPosition, localAxis.normalized), minLimit, maxLimit);
-            contrainedLocalTargetPosition = localAxis.normalized * constrainedValue;
-
-            // Apply the constrained position
             visualTarget.position = visualTarget.TransformPoint(contrainedLocalTargetPosition);
-
-            // Play click sound if the limit is reached
-            if (Mathf.Approximately(constrainedValue, minLimit) || Mathf.Approximately(constrainedValue, maxLimit))
-            {
-                if (!clickSound.isPlaying)
-                {
-                    clickSound.Play();
-                }
-            }
+        }
+        else
+        {
+            visualTarget.localPosition = Vector3.Lerp(visualTarget.localPosition, initialLocalPos, Time.deltaTime * resetSpeed);
         }
     }
-
 }
