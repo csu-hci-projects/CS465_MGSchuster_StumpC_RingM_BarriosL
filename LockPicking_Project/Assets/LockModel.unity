@@ -1145,6 +1145,8 @@ MonoBehaviour:
   resetSpeed: 10
   disapear: {x: 10000, y: 10000, z: 10000}
   pin: {fileID: 332581829}
+  audioSource: {fileID: 1510486114}
+  pushSound: {fileID: 8300000, guid: eeeda5dce5e1d344f8e2f6195f16cb38, type: 3}
 --- !u!1 &334160969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2248,6 +2250,8 @@ MonoBehaviour:
   resetSpeed: 10
   disapear: {x: 10000, y: 10000, z: 10000}
   pin: {fileID: 827615344}
+  audioSource: {fileID: 1510486114}
+  pushSound: {fileID: 8300000, guid: eeeda5dce5e1d344f8e2f6195f16cb38, type: 3}
 --- !u!1 &847462548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2404,6 +2408,8 @@ MonoBehaviour:
   resetSpeed: 10
   disapear: {x: 10000, y: 10000, z: 10000}
   pin: {fileID: 847462549}
+  audioSource: {fileID: 1510486114}
+  pushSound: {fileID: 8300000, guid: eeeda5dce5e1d344f8e2f6195f16cb38, type: 3}
 --- !u!54 &847462554
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3706,6 +3712,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
 --- !u!4 &964807222
 Transform:
   m_ObjectHideFlags: 0
@@ -4765,6 +4773,8 @@ MonoBehaviour:
   resetSpeed: 10
   disapear: {x: 10000, y: 10000, z: 10000}
   pin: {fileID: 1327985927}
+  audioSource: {fileID: 1510486114}
+  pushSound: {fileID: 8300000, guid: eeeda5dce5e1d344f8e2f6195f16cb38, type: 3}
 --- !u!1001 &1344946841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5336,7 +5346,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eeeda5dce5e1d344f8e2f6195f16cb38, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5760,6 +5770,8 @@ MonoBehaviour:
   resetSpeed: 10
   disapear: {x: 10000, y: 10000, z: 10000}
   pin: {fileID: 1524556623}
+  audioSource: {fileID: 1510486114}
+  pushSound: {fileID: 8300000, guid: eeeda5dce5e1d344f8e2f6195f16cb38, type: 3}
 --- !u!1 &1590592429
 GameObject:
   m_ObjectHideFlags: 0
