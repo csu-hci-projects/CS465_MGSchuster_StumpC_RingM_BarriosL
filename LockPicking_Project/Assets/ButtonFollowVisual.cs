@@ -23,6 +23,11 @@ public class ButtonFollowVisual : MonoBehaviour
 
     private XRBaseInteractable interactable;
     private bool isFollowing = false;
+
+    public AudioSource audioSource; 
+    public AudioClip pushSound;
+    private bool soundPlayed = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,11 +75,13 @@ public class ButtonFollowVisual : MonoBehaviour
     {
         if (freeze)
         {
+            PlayPushSound();
             pin.position = pin.TransformPoint(disapear);
             return;
         }
         if (visualTarget.position.y >= initialPos.y + threshold.y)
         {
+            PlayPushSound();
             pin.position = pin.TransformPoint(disapear);
             return;
         }
@@ -90,6 +97,16 @@ public class ButtonFollowVisual : MonoBehaviour
         else
         {
             visualTarget.localPosition = Vector3.Lerp(visualTarget.localPosition, initialLocalPos, Time.deltaTime * resetSpeed);
+        }
+    }
+
+    // This method plays the push sound once.
+    private void PlayPushSound()
+    {
+        if (!soundPlayed && audioSource != null && pushSound != null)
+        {
+            audioSource.PlayOneShot(pushSound);
+            soundPlayed = true;
         }
     }
 }
