@@ -123,6 +123,8 @@ public class MXInkStylusHandler : MonoBehaviour
         }
         
         DrawLine();
+        HandleObjectGrab();
+
     }
 
     public void TriggerHapticPulse(float amplitude, float duration)
@@ -164,5 +166,40 @@ public class MXInkStylusHandler : MonoBehaviour
             currentLine = null;
         }
     }
+    private GameObject heldObject = null;
+    private Transform originalParent;
+
+    private void HandleObjectGrab()
+    {
+        
+
+        if (heldObject == null)
+        {
+            // Do a short sphere cast or overlap check from the tip to detect grabbable objects
+            Collider[] hits = Physics.OverlapSphere(tip.transform.position, 0.01f);
+            foreach (Collider hit in hits)
+            {
+                if (hit.CompareTag("Grabbable") && stylus.clusterFrontValue)
+                {
+                    heldObject = hit.gameObject;
+                    originalParent = heldObject.transform.parent;
+                    heldObject.transform.SetParent(tip.transform);
+                    TriggerHapticClick(); // Optional feedback
+                    break;
+                }
+            }
+        }
+        else
+        {
+            // Release object when button is released
+            if (!stylus.clusterFrontValue)
+            {
+                heldObject.transform.SetParent(originalParent);
+                heldObject = null;
+            }
+        }
+    }
+
+
 
 }
