@@ -5,6 +5,8 @@
  
   ## Current Project Video (Checkpoint 2)
 
+  ## Scenes
+  * LockPicking - includes the ...
 
   ## Contributors:
 
