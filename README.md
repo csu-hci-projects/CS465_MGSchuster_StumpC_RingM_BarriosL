@@ -6,7 +6,7 @@
   ## Current Project Video (Checkpoint 2)
 
   ## Scenes
-  * LockPicking - includes the ...
+  * LockPicking_Project/assets/LockModel - Lockpicking using controllers with working pins and sound but no timer
 
   ## Contributors:
 
