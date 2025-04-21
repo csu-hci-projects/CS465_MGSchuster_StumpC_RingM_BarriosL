@@ -31,6 +31,7 @@
   * Created the pin interactions
   * Wrote Design and Procedure section
   * Helped with Introduction section
+  * Made timer export to file
 * Lino Barrios
   * Added support for the pen interactions
   * Helped with the timer
