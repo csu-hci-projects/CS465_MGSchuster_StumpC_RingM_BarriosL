@@ -18,6 +18,7 @@
   * Wrote Introduction section
 * Casey Stump
   * Added sound to the pins
+  * Wrote limitation section
   * Helped with the timer
 * Maggie Ring
   * Created the lock and lockpick
