@@ -36,3 +36,6 @@
   * Helped with the timer
   * Helped make the controllers and Pen interaction work
   * Tested a lot of controllers and the pen scenes
+  * Wrote the Other works
+  * Wrote 3.1, 3.2, 5.1,
+  * Wrote 4, 4.1, 4.2, 4.3
