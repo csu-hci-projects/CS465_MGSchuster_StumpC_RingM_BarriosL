@@ -11,9 +11,17 @@
   ## Contributors:
 
 * Mallory Guerdet-Schuster
-
+  * Helped with the timer
+  * Helped with the pin interactions
+  * Wrote Introduction section
 * Casey Stump
-
+  * Added sound to the pins
+  * Helped with the timer
 * Maggie Ring
-
+  * Created the lock and lockpick
+  * Created the pin interactions
+  * Wrote Design and Procedure section
+  * Helped with Introduction section
 * Lino Barrios
+  * Added support for the pen interactions
+  * Helped with the timer
