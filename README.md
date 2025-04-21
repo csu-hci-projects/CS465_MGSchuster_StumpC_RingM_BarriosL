@@ -38,4 +38,13 @@
   * https://youtu.be/P1brZZwUOE4
 
 ## Youtube of HW1
-* 
+
+
+## Checkpoint 2
+* Code Explanation video
+   * https://youtu.be/PsJxlDbxWB0
+* Video for the Demo
+   * here
+ 
+* Overleaf code pfd
+   *  
