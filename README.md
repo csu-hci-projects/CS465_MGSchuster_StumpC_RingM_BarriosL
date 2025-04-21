@@ -3,7 +3,9 @@
   ## Research PDF
   * [overleaf document here](https://www.overleaf.com/read/msxcfwxjstyy#edbfe8)
  
-  ## Current Project Video (Checkpoint 2)
+  ## Checkpoint 2 overview video
+
+  ## Checkpoint 2 demo video
 
   ## Scenes
   * LockPicking_Project/assets/LockModel - Lockpicking using controllers with working pins and sound but no timer
