@@ -6,7 +6,7 @@
   ## Checkpoint 2 overview video
 
   ## Checkpoint 2 demo video
-    *https://www.youtube.com/watch?v=DTUqyq9mBy4
+    https://www.youtube.com/watch?v=DTUqyq9mBy4
   ## Scenes
   * LockPicking_Project/assets/LockModel - Lockpicking using controllers with working pins and sound but no timer
 
