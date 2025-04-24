@@ -2,9 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.UI;
+using System.IO;
+using System;
+
 
 public class ButtonFollowVisual : MonoBehaviour
 {
+    public String timeText;
+    public float _currentTime;
+
     public Transform visualTarget;
     public Vector3 localAxis;
 
@@ -17,27 +24,23 @@ public class ButtonFollowVisual : MonoBehaviour
     public Transform pin;
 
     private Transform pokeAttachTransform;
-
-    private bool freeze = false;
-
-
     private XRBaseInteractable interactable;
     private bool isFollowing = false;
 
-    public AudioSource audioSource; 
-    public AudioClip pushSound;    
-    private bool soundPlayed = false; // Used to play the sound only once per pin push event.
+    public AudioSource audioSource;
+    public AudioClip pushSound;
+    private bool soundPlayed = false;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         initialLocalPos = visualTarget.localPosition;
         initialPos = visualTarget.position;
+        _currentTime = 0;
 
         interactable = GetComponent<XRBaseInteractable>();
         interactable.hoverEntered.AddListener(Follow);
         interactable.hoverExited.AddListener(Reset);
-        interactable.selectEntered.AddListener(Freeze);
     }
 
     public void Follow(BaseInteractionEventArgs hover)
@@ -46,7 +49,6 @@ public class ButtonFollowVisual : MonoBehaviour
         {
             XRPokeInteractor interactor = (XRPokeInteractor)hover.interactorObject;
             isFollowing = true;
-            freeze = false;
             pokeAttachTransform = interactor.attachTransform;
             offset = visualTarget.position - pokeAttachTransform.position;
         }
@@ -57,28 +59,12 @@ public class ButtonFollowVisual : MonoBehaviour
         if (hover.interactorObject is XRPokeInteractor)
         {
             isFollowing = false;
-            freeze = false;
         }
     }
 
-    public void Freeze(BaseInteractionEventArgs hover)
-    {
-        if (hover.interactorObject is XRPokeInteractor)
-        {
-            freeze = true;
-        }
-    }
-
-
-    // Update is called once per frame
     void Update()
     {
-        if (freeze)
-        {
-            PlayPushSound();
-            pin.position = pin.TransformPoint(disapear);
-            return;
-        }
+        _currentTime += Time.deltaTime;
         if (visualTarget.position.y >= initialPos.y + threshold.y)
         {
             PlayPushSound();
@@ -89,9 +75,7 @@ public class ButtonFollowVisual : MonoBehaviour
         if (isFollowing)
         {
             Vector3 localTargetPosition = visualTarget.InverseTransformPoint(pokeAttachTransform.position + offset);
-
             Vector3 contrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
-
             visualTarget.position = visualTarget.TransformPoint(contrainedLocalTargetPosition);
         }
         else
@@ -100,13 +84,17 @@ public class ButtonFollowVisual : MonoBehaviour
         }
     }
 
-    // This method plays the push sound once.
     private void PlayPushSound()
     {
         if (!soundPlayed && audioSource != null && pushSound != null)
         {
             audioSource.PlayOneShot(pushSound);
             soundPlayed = true;
+
+            timeText = _currentTime.ToString("F2");
+            string filePath = @"C:\Users\Public\time.txt";
+            string content = timeText + "\n";
+            File.AppendAllText(filePath, content);
         }
     }
 }
