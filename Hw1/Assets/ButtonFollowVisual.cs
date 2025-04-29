@@ -9,8 +9,10 @@ using System;
 
 public class ButtonFollowVisual : MonoBehaviour
 {
+    public String pinNumber;
     public String timeText;
     public float _currentTime;
+    public GameObject taskFinishedPanel;
 
     public Transform visualTarget;
     public Vector3 localAxis;
@@ -34,9 +36,11 @@ public class ButtonFollowVisual : MonoBehaviour
 
     void Start()
     {
+        HideTaskFinished();
         initialLocalPos = visualTarget.localPosition;
         initialPos = visualTarget.position;
         _currentTime = 0;
+        
 
         interactable = GetComponent<XRBaseInteractable>();
         interactable.hoverEntered.AddListener(Follow);
@@ -84,6 +88,17 @@ public class ButtonFollowVisual : MonoBehaviour
         }
     }
 
+    private void ShowTaskFinished()
+    {
+        taskFinishedPanel.SetActive(true); // Show the panel or text
+    }
+
+    void HideTaskFinished()
+    {
+        taskFinishedPanel.SetActive(false);
+    }
+
+
     private void PlayPushSound()
     {
         if (!soundPlayed && audioSource != null && pushSound != null)
@@ -92,9 +107,15 @@ public class ButtonFollowVisual : MonoBehaviour
             soundPlayed = true;
 
             timeText = _currentTime.ToString("F2");
+            string numberofPin = pinNumber.ToString(); 
             string filePath = @"C:\Users\Public\time.txt";
-            string content = timeText + "\n";
+            string content = timeText + " PEN PIN: " + numberofPin + "\n";
             File.AppendAllText(filePath, content);
+
+            ShowTaskFinished();
+
         }
     }
 }
+
+    
