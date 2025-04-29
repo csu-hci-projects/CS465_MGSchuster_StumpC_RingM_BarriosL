@@ -1023,6 +1023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinNumber: 5
+  experimentsTy: Controller
   timeText: 
   _currentTime: 0
   taskFinishedPanel: {fileID: 1286289410}
@@ -2013,6 +2014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinNumber: 2
+  experimentsTy: Controller
   timeText: 
   _currentTime: 0
   taskFinishedPanel: {fileID: 0}
@@ -2175,6 +2177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinNumber: 1
+  experimentsTy: Controller
   timeText: 
   _currentTime: 0
   taskFinishedPanel: {fileID: 0}
@@ -4901,6 +4904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinNumber: 3
+  experimentsTy: Controller
   timeText: 
   _currentTime: 0
   taskFinishedPanel: {fileID: 0}
@@ -5952,6 +5956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinNumber: 4
+  experimentsTy: Controller
   timeText: 
   _currentTime: 0
   taskFinishedPanel: {fileID: 0}

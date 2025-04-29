@@ -3213,6 +3213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinNumber: 2
+  experimentsTy: Pen
   timeText: 
   _currentTime: 0
   taskFinishedPanel: {fileID: 0}
@@ -4631,6 +4632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinNumber: 4
+  experimentsTy: Pen
   timeText: 
   _currentTime: 0
   taskFinishedPanel: {fileID: 0}
@@ -12384,6 +12386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinNumber: 3
+  experimentsTy: Pen
   timeText: 
   _currentTime: 0
   taskFinishedPanel: {fileID: 0}
@@ -22850,6 +22853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinNumber: 1
+  experimentsTy: Pen
   timeText: 
   _currentTime: 0
   taskFinishedPanel: {fileID: 0}
@@ -24388,6 +24392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinNumber: 5
+  experimentsTy: Pen
   timeText: 
   _currentTime: 0
   taskFinishedPanel: {fileID: 568713463}

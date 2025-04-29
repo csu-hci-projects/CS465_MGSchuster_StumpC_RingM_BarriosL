@@ -10,6 +10,7 @@ using System;
 public class ButtonFollowVisual : MonoBehaviour
 {
     public String pinNumber;
+    public String experimentsTy;
     public String timeText;
     public float _currentTime;
     public GameObject taskFinishedPanel;
@@ -108,8 +109,9 @@ public class ButtonFollowVisual : MonoBehaviour
 
             timeText = _currentTime.ToString("F2");
             string numberofPin = pinNumber.ToString(); 
+            string experiementType = experimentsTy.ToString();
             string filePath = @"C:\Users\Public\time.txt";
-            string content = timeText + " PEN PIN: " + numberofPin + "\n";
+            string content = timeText +" "+ experiementType + " : " + numberofPin + "\n";
             File.AppendAllText(filePath, content);
 
             ShowTaskFinished();
