@@ -10,7 +10,7 @@
   * https://youtu.be/HDWak0USq7g
 
   ## Programming Video
-  *https://youtu.be/WtCuKPbXIy8 
+  * https://youtu.be/WtCuKPbXIy8 
 
   
 
