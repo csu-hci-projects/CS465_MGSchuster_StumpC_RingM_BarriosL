@@ -1,16 +1,21 @@
 # CS465_MGSchuster_StumpC_RingM_BarriosL
 
-  ## Research PDF
+  ## FINAL Research PDF
   * [overleaf document here](https://www.overleaf.com/read/msxcfwxjstyy#edbfe8)
  
-  ## Checkpoint 2 overview video
-  * https://youtu.be/PsJxlDbxWB0
+  ## Short video Overview 
+  * https://youtu.be/XuIdWebG0I4 
 
-  ## Checkpoint 2 demo video
-  * https://www.youtube.com/watch?v=DTUqyq9mBy4
+  ## Presentation Video
+  * https://youtu.be/HDWak0USq7g
+
+  ## Programming Video
+  *https://youtu.be/WtCuKPbXIy8 
+
+  
 
   ## Scenes
-  * LockPicking_Project/assets/LockModel - Lockpicking using controllers with working pins and sound, but timer not tested for implementation yet
+  * LockPicking_Project/assets/LockModel - 
 
   ## Contributors:
 
