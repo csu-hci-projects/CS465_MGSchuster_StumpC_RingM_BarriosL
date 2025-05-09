@@ -45,3 +45,11 @@
   * Wrote the Other works
   * Wrote 3.1, 3.2, 5.1,
   * Wrote 4, 4.1, 4.2, 4.3
+
+## Instructrions: Possible Error you may encounter 
+Scene path in Unity 
+Assets/Scenes/
+ 
+To run the prototype, you need to simply press play for the scenes under assets for pen-scene and controller-scene
+
+For the pen scene, the pen may think it is docked so make sure pen is not docked and stationary it is an error that occurs on a rare occasion but if it happens, try again; it will work. 
