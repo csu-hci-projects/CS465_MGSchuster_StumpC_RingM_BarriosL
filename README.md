@@ -54,7 +54,7 @@
   * Wrote 3.1, 3.2, 5.1,
   * Wrote 4, 4.1, 4.2, 4.3
 
-## Instructrions:
+## Instructions:
 Opening the zipped file if not getting code from GitHub the group name will open to another folder with the group name and in that folder will have the project under the name HW1 The naming is off but the work is in there. The scenes will be in the Assets of the Hw1 folder. 
 
 Scene path in Unity 
